@@ -9,7 +9,6 @@ import Notifications from "./components/UI/Notifications";
 let initialSending = true;
 
 function App() {
-  debugger;
   const doShowCart = useSelector((state) => state.cart.showCart);
   const product = useSelector((state) => state.product);
   const notification = useSelector((state) => state.cart.notification);
@@ -53,7 +52,7 @@ function App() {
 
     //I catch error here in order to handle all kind of mistakes
 
-    updateData().catch(
+    updateData().catch((error) =>
       dispath(
         cartActions.showNotification({
           status: "error",

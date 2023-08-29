@@ -50,5 +50,8 @@ const productSlice = createSlice({
     },
   },
 });
+
+const updatCard = (product) => {};
+
 export const productActions = productSlice.actions;
 export default productSlice.reducer;
